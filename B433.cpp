@@ -10,15 +10,15 @@ int main()
 	cin>>a[i];
 	int m;
 	cin>>m;
-	long int  *v;
-	v=new long int[m];
+	long  long int  *v;
+	v=new long long int[m];
 	for(i=0;i<m;i++)
 	v[i]=0;
 	int *b;
 	b=new int[n];
 	for(i=0;i<n;i++)
 	b[i]=a[i];
-
+	sort(b,b+n);
 	int k=0;
 	for(i=0;i<m;i++)
 	{
@@ -36,7 +36,6 @@ int main()
 		{
 			l=l-1;
 			r=r-1;
-			sort(b,b+n);
 			for(j=l;j<=r;j++)
 			v[k]+=b[j];
 			k++;
