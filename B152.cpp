@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-int n,m,x,y,k,ix,iy,i,dx,dy,c=0;
+ long long int n,m,x,y,k,ix,iy,i,dx,dy,c=0;
 cin>>n>>m;
 cin>>x>>y;
 n=n-1;
