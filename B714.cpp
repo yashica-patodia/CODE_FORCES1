@@ -12,7 +12,7 @@ arr=new lli [n];
 for(i=0;i<n;i++)
 cin>>arr[i];
 lli distinct[n];
-//lli fre[(10e9)+1];
+
 for(lli j=0;j<=10e9;j++)
 {
 	c=0;
