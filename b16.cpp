@@ -1,36 +1,29 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
 
+int main()
 {
-int n,m;
-int x,y;
-int i;
+int n,m,i,x,y;
+vector<int,int,greater<int> >vec;
 cin>>n>>m;
-multimap<int,int,greater<int>>arr;
 for(i=0;i<m;i++)
 {
 cin>>x>>y;
-arr.insert(make_pair(y,x));
+vec.push_back(make_pair(y,x));
+//cin>>vec[i].second>>vec[i].first;
 }
-multimap <int,int> :: iterator it;
-it=arr.begin();
-int s=0,temp=0;
-while( temp!=n && it!=arr.end())
+
+//sort(vec.begin(),vec.end());
+for(i=0;i<m;i++)
+cout<<vec[i].second<<" ";
+i=0;
+int s=0;
+while(n!=0)
 {
-if((it->second)<=n)
-{
-temp+=it->second;
-n=n-it->second;
-s+=(it->first)*(it->second);
-it++;
-}
-else
-{
-s+=(it->first)*n;
-temp+=n;
-n=0;
-}
+n=n-(vec[i].second);
+s+=(vec[i].first)*(vec[i].second);
+i++;
 }
 cout<<s;
 }
+

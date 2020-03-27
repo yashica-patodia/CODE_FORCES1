@@ -3,32 +3,30 @@ using namespace std;
 typedef long long int lli;
 int n;
 lli *arr;
-int main()
-{
-int i,p=0;
 
+int  main()
+{
+int i,k,p=0,c=0,dis=0;
 cin>>n;
-arr=new lli[n];
-lli distinct[n];
+arr=new lli [n];
 for(i=0;i<n;i++)
 cin>>arr[i];
-sort(arr,arr+n);
+lli distinct[n];
 
-
-int dis=0;
-for(i=0;i<n-1;i++)
+for(lli j=0;j<=10e9;j++)
 {
-
-while(arr[i]==arr[i+1])
-{
-i++;
+	c=0;
+	for( k=0;k<n;k++)
+	{
+		if(j==arr[k])
+		c+=1;
+	}
+	if(c==1)
+	{
+		distinct[p++]=j;
+		dis++;
+	}
 }
-distinct[p++]=arr[i];
-}
-if(arr[n-1]!=arr[n-2])
-distinct[p++]=arr[i];
-
-dis=p;
 if(dis==1)
 cout<<"YES";
  else if(dis==2)
@@ -37,13 +35,9 @@ else if(dis==3)
 {
 if(2*distinct[1]==(distinct[0]+distinct[2]))
 cout<<"YES";
-else
-cout<<"NO";
 
 }
 else if(dis>=4)
 cout<<"NO";
 }
-
-
 
