@@ -41,6 +41,8 @@ typedef vector<int> vi;
 //typedef  vector<vector<lli> >ncr(1001,vector<lli>(1001,0))
 typedef vector<plli> vplli;
 long long MOD=1000000009;
+//kaunse index mein hoon 
+//j prefix of j length in "hard" has to occur as a substring in S
 void solve()
 {
 	int n;
